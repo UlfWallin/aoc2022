@@ -3,7 +3,6 @@ maxSum = 0
 with open('input.txt') as file:
     for line in file:
         if line.strip() == '':
-            print(sum)
             # Sum 
             if sum > maxSum:
                 maxSum = sum
