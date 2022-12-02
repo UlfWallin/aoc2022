@@ -7,22 +7,13 @@ with open('input.txt') as file:
         action = line[2]
         if action == 'Y':
             me = opponent
+            sum += 3
         elif action == 'X':
             me = lose[opponent]
         else:
             me = win[opponent]
+            sum += 6
 
         sum += ord(me) - ord('A') + 1
-
-        match (me, opponent):
-            case ('A', 'C'):
-                sum += 6
-            case ('C', 'B'):
-                sum += 6
-            case ('B', 'A'):
-                sum += 6
-                   
-        if me == opponent:
-            sum += 3
 
 print(sum)
