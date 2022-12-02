@@ -1,5 +1,4 @@
 sum = 0
-maxSum = 0
 top_three = [0] * 3
 with open('input.txt') as file:
     for line in file:
