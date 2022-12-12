@@ -9,16 +9,16 @@ foreach(var cmd in cmds) {
     if (cmd.StartsWith("$ cd")) {
         var p = cmd.Split(' ');
         if (p[2] == "..") {
-           currentDir = currentDir.Parent;
+           currentDir = currentDir?.Parent;
         }
         else if (p[2] != "/") {
             var tmp = new Dir(p[2], currentDir);
-            currentDir.Dirs.Add(tmp);
+            currentDir?.Dirs.Add(tmp);
             currentDir = tmp;
         }
     }
     else if(!cmd.StartsWith('$') && !cmd.StartsWith("dir")) {
-        currentDir.Files.Add(new DirFile(cmd));
+        currentDir?.Files.Add(new DirFile(cmd));
     }
 }
 var spaceAvailable = totalSpace - root.CalcSize();

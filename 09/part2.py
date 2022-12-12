@@ -36,7 +36,5 @@ for motion in motions:
                 rope[i]['y'] += clamp(y_diff, -1, 1)
                 if i == len(rope) - 1:
                     positions.append((rope[i]['x'], rope[i]['y']))
-    print(motion)
-    
 
 print(len(set(positions)))
