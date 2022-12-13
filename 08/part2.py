@@ -16,11 +16,6 @@ def get_view(center: int, height: int, arr, inc: int):
 
     return(view)
 
-l = get_view(2, 5, [3,3,5,4,9], -1)
-u = get_view(3, 5, [3,5,3,5,3], -1)
-d = get_view(3, 5, [3,5,3,5,3], 1)
-r = get_view(2, 5, [3,3,5,4,9], 1)
-print(u,l,d,r)
 with open("input.txt") as file:
     for line in file:
         forest.append(list(map(int,line.strip())))
